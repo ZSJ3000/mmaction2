@@ -1,0 +1,6 @@
+python ../tools/analysis/analyze_logs.py plot_curve ./1.json --keys loss_action_cls --legend loss_action_cls --out ./Aresult.pdf
+python ../tools/analysis/analyze_logs.py plot_curve ./1.json  --keys prec@top1  --out Aresults2.pdf
+python ../tools/analysis/analyze_logs.py plot_curve ./1.json  --keys recall@top1  --out Aresults3.pdf
+
+python tools/test.py --config ./configs/detection/ava/slowfast_temporal_max_focal_alpha3_gamma1_kinetics_pretrained_r50_8x8x1_cosine_10e_ava22_rgb.py --checkpoint ./slowfast_r50-k400-pre-temporal-max-focal-alpha3-gamma1_8xb6-8x8x1-cosine-10e_ava22-rgb_20220906-dd59e26f.pth --eval mAP
+
